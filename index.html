@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script
+      src="https://kit.fontawesome.com/c958217139.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <div class="row cities">
+            <div class="col-3 city"><a href="#">New York</a></div>
+            <div class="col-3 city"><a href="#">Paris</a></div>
+            <div class="col-3 city"><a href="#">Sydney</a></div>
+            <div class="col-3 city"><a href="#">San Fracisco</a></div>
+          </div>
+          <form class="input-btn" id="form-container">
+            <input
+              type="text"
+              placeholder="🎾Type your city"
+              class="form-control"
+              id="city-input"
+            />
+            <input
+              type="submit"
+              class="btn btn-info"
+              id="search-button"
+              value="Search"
+            />
+
+            <button type="button" class="btn btn-success" id="current-button">
+              Current
+            </button>
+          </form>
+
+          <div class="row">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+              <div class="card card-gap">
+                <div class="card-body">
+                  <h1 class="card-title" id="city">LAGOS</h1>
+                  <p class="card-text" id="dayAndTime"></p>
+                  <p id="weather-condition"><strong>Rainy</strong></p>
+                  <i class="fa-solid fa-cloud-rain icons"></i><br />
+
+                  <span class="temperature" id="temperature">20°C</span>
+                  <!-- <span
+                        ><a href="#" id="celsius"><sup>°C</sup></a></span
+                      ><sup>|</sup
+                      ><span
+                        ><a href="#" id="fahrenheit"><sup>°F</sup></a></span
+                      > -->
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card card-gap weather-position">
+                <div class="card-body">
+                  <p class="card-text card-content" id="precipitation">
+                    Precipitation: 93%
+                  </p>
+                  <p class="card-text card-content" id="wind">Wind: 4km/h</p>
+                  <p class="card-text card-content" id="humidity">
+                    Humidity: 89%
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-group">
+        <div class="card weather-days">
+          <div class="card-body">
+            <p class="card-text">Sun</p>
+            <i class="fa-solid fa-cloud-sun icons"></i>
+            <p class="card-text">24°</p>
+          </div>
+        </div>
+        <div class="card weather-days">
+          <div class="card-body">
+            <p class="card-text">Mon</p>
+            <i class="fa-solid fa-cloud-sun icons"></i>
+            <p class="card-text">26°</p>
+          </div>
+        </div>
+        <div class="card weather-days">
+          <div class="card-body">
+            <p class="card-text">Tue</p>
+            <i class="fa-solid fa-cloud-sun icons"></i>
+            <p class="card-text">26°</p>
+          </div>
+        </div>
+        <div class="card weather-days">
+          <div class="card-body">
+            <p class="card-text">Wed</p>
+            <i class="fa-solid fa-cloud-sun icons"></i>
+            <p class="card-text">27°</p>
+          </div>
+        </div>
+        <div class="card weather-days">
+          <div class="card-body">
+            <p class="card-text">Thur</p>
+            <i class="fa-solid fa-cloud-sun icons"></i>
+            <p class="card-text">25°</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
