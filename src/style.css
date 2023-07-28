@@ -67,12 +67,25 @@ sup {
   border: 1px solid rgb(199, 193, 193);
   border-radius: 5px;
   margin: 30px;
+  margin-bottom: 5px;
   padding: 30px;
   max-width: 650px;
 }
 
+.foot-note {
+  margin: 0px 28px 20px;
+}
+
 .form-control {
   margin-right: 10px;
+}
+
+.github-link {
+  color: blue;
+}
+
+.github-link:hover {
+  text-decoration: underline;
 }
 
 .icons {
