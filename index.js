@@ -32,7 +32,7 @@ function checkWeather(response) {
   let temperatureElement = document.querySelector("#temperature");
   weatherCondition.innerHTML = response.data.weather[0].main;
   let temperature = Math.round(response.data.main.temp);
-  temperatureElement.innerHTML = `${temperature}°C`;
+  temperatureElement.innerHTML = `${temperature}`;
   let precipitationElement = document.querySelector("#precipitation");
   let precipitation = Math.round(response.data.clouds.all);
   precipitationElement.innerHTML = `Precipitation: ${precipitation}%`;

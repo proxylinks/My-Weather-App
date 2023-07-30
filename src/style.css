@@ -110,6 +110,12 @@ sup {
   font-weight: 500;
 }
 
+.units {
+  font-size: 12px;
+  position: relative;
+  top: -15px;
+}
+
 .weather-days {
   margin: 20px;
   text-align: center;
