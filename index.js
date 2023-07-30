@@ -63,7 +63,7 @@ function showCurrentWeather(response) {
   currentPosition.innerHTML = `${position}`;
   let currentTemperature = document.querySelector("#temperature");
   let temperature = Math.round(response.data.main.temp);
-  currentTemperature.innerHTML = `${temperature}°C`;
+  currentTemperature.innerHTML = `${temperature}`;
   let weatherCondition = document.querySelector("#weather-condition");
   let condition = response.data.weather[0].main;
   weatherCondition.innerHTML = `${condition}`;
