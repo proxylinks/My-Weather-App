@@ -17,6 +17,7 @@ h1 {
   font-weight: 700;
   font-size: 30px;
   margin-bottom: 0;
+  line-height: 1rem;
 }
 
 p {
@@ -30,6 +31,8 @@ sup {
 .btn {
   margin-right: 10px;
 }
+
+
 
 .card-content {
   text-align: right;
@@ -45,7 +48,8 @@ sup {
 .card-group {
   border: 1px solid rgb(199, 193, 193);
   border-radius: 5px;
-  margin-top: 30px;
+  margin-top: 20px;
+  padding: 10px;
 }
 
 .cities {
@@ -72,6 +76,7 @@ sup {
   max-width: 650px;
 }
 
+
 .foot-note {
   margin: 0px 28px 20px;
 }
@@ -91,6 +96,7 @@ sup {
 .icons {
   font-size: 36px;
   color: #31D2F2;
+  display: block;
 }
 .input-btn {
   display: flex;
@@ -109,6 +115,7 @@ sup {
 .temperature {
   font-size: 36px;
   font-weight: 500;
+  line-height: 30px;
 }
 
 .units {
@@ -118,7 +125,7 @@ sup {
 }
 
 .weather-days {
-  margin: 20px;
+  margin: 5px;
   text-align: center;
   border: none;
 }
