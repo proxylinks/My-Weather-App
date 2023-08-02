@@ -17,7 +17,7 @@ h1 {
   font-weight: 700;
   font-size: 30px;
   margin-bottom: 0;
-  line-height: 1rem;
+  line-height: 2rem;
 }
 
 p {
@@ -76,6 +76,10 @@ sup {
   max-width: 650px;
 }
 
+.description-icon {
+  width: 30px;
+  height: 30px;
+}
 
 .foot-note {
   margin: 0px 28px 20px;

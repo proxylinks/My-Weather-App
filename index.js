@@ -24,24 +24,30 @@ if (minute < 10) {
 let time = document.querySelector("#dayAndTime");
 time.innerHTML = `${day} ${hour}:${minute}`;
 
+// This function shows the weather of different cities across the world
 function checkWeather(response) {
-  console.log(response);
   let cityElement = document.querySelector("#city");
-  cityElement.innerHTML = response.data.name;
   let weatherCondition = document.querySelector("#weather-condition");
   let temperatureElement = document.querySelector("#temperature");
-  weatherCondition.innerHTML = response.data.weather[0].main;
   let temperature = Math.round(response.data.main.temp);
-  temperatureElement.innerHTML = `${temperature}`;
   let precipitationElement = document.querySelector("#precipitation");
   let precipitation = Math.round(response.data.clouds.all);
-  precipitationElement.innerHTML = `Precipitation: ${precipitation}%`;
   let windElement = document.querySelector("#wind");
   let windSpeed = Math.round(response.data.wind.speed);
-  windElement.innerHTML = `Wind Speed: ${windSpeed}km/h`;
   let humidityElement = document.querySelector("#humidity");
   let humidity = Math.round(response.data.main.humidity);
+  let descriptionIcon = document.querySelector("#description-icon");
+  
+  cityElement.innerHTML = response.data.name;
+  weatherCondition.innerHTML = response.data.weather[0].main;
+  temperatureElement.innerHTML = `${temperature}`;
+  precipitationElement.innerHTML = `Precipitation: ${precipitation}%`;
+  windElement.innerHTML = `Wind Speed: ${windSpeed}km/h`;
   humidityElement.innerHTML = `Humidity: ${humidity}%`;
+  descriptionIcon.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
+ 
+
+  console.log(response);
 }
 
 function cityInput(event) {
@@ -55,26 +61,26 @@ function cityInput(event) {
 let submitForm = document.querySelector("#form-container");
 submitForm.addEventListener("submit", cityInput);
 
-// Bonus Task
+// This function shows the weather in the current location
 function showCurrentWeather(response) {
   let currentPosition = document.querySelector("#city");
-  console.log(response);
   let position = response.data.name;
-  currentPosition.innerHTML = `${position}`;
   let currentTemperature = document.querySelector("#temperature");
   let temperature = Math.round(response.data.main.temp);
-  currentTemperature.innerHTML = `${temperature}`;
   let weatherCondition = document.querySelector("#weather-condition");
   let condition = response.data.weather[0].main;
-  weatherCondition.innerHTML = `${condition}`;
   let precipitationElement = document.querySelector("#precipitation");
   let precipitation = Math.round(response.data.clouds.all);
-  precipitationElement.innerHTML = `Precipitation: ${precipitation}%`;
   let windElement = document.querySelector("#wind");
   let windSpeed = Math.round(response.data.wind.speed);
-  windElement.innerHTML = `Wind Speed: ${windSpeed}km/h`;
   let humidityElement = document.querySelector("#humidity");
   let humidity = Math.round(response.data.main.humidity);
+
+  currentPosition.innerHTML = `${position}`;
+  currentTemperature.innerHTML = `${temperature}`;
+  weatherCondition.innerHTML = `${condition}`;
+  precipitationElement.innerHTML = `Precipitation: ${precipitation}%`;
+  windElement.innerHTML = `Wind Speed: ${windSpeed}km/h`;
   humidityElement.innerHTML = `Humidity: ${humidity}%`;
 }
 function showPosition(position) {
