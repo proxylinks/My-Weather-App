@@ -103,16 +103,19 @@ function checkWeather(response) {
   getForecast(response.data.coord);
 }
 
-function cityInput(event) {
-  event.preventDefault();
-  let city = document.querySelector("#city-input").value;
+function search(city) {
   let apiKey = `cabdbda40038ba7d1165b953b1c7bd6c`;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(checkWeather);
 }
 
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
 let submitForm = document.querySelector("#form-container");
-submitForm.addEventListener("submit", cityInput);
+submitForm.addEventListener("submit", handleSubmit);
 
 // This function shows the weather in the current location
 function showCurrentWeather(response) {
@@ -174,3 +177,5 @@ function showCelsiusTemperature(event) {
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
+
+search("Lagos");
