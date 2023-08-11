@@ -133,3 +133,8 @@ sup {
   text-align: center;
   border: none;
 }
+
+.weather-forecast {
+margin-top: 20px;
+text-align: center;
+}
