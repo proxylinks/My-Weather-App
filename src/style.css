@@ -85,6 +85,9 @@ sup {
   margin: 0px 28px 20px;
 }
 
+.forecast-temperature-max{
+  font-weight: bold;
+}
 .form-control {
   margin-right: 10px;
 }
@@ -126,6 +129,10 @@ sup {
   font-size: 12px;
   position: relative;
   top: -15px;
+}
+
+.weather-date {
+  font-weight: bold;
 }
 
 .weather-days {
