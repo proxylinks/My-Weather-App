@@ -32,6 +32,21 @@ sup {
   margin-right: 10px;
 }
 
+
+.btn-info {
+  background-color: #fff;
+}
+
+.btn-info:hover {
+  background-color: #fff;
+  transition: all 1000ms ease-in-out;
+}
+
+.card-background {
+  opacity: 0.7;
+  background-color: #62CEDD;
+}
+
 .card-content {
   text-align: right;
 }
@@ -48,21 +63,6 @@ sup {
   border-radius: 5px;
   margin-top: 20px;
   padding: 10px;
-}
-
-.cities {
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  margin-bottom: 30px;
-}
-
-.city:hover {
-  background-color: #31d2f2;
-  border-radius: 4px;
-  transition: all 400ms ease-in-out;
-  color: #fff;
 }
 
 .container {
@@ -100,15 +100,11 @@ sup {
   text-decoration: underline;
 }
 
-.icons {
-  font-size: 36px;
-  color: #31D2F2;
-  display: block;
-}
 .input-btn {
   display: flex;
   flex-direction: row;
   margin-bottom: 30px;
+  margin-top: 25px;
 }
 
 .location {
@@ -142,9 +138,13 @@ sup {
 }
 
 .weather-forecast {
-margin-top: 20px;
 text-align: center;
-background-color: #ffffff;
-border: 1px solid rgba(0, 0, 0, 0.176);
-border-radius: 5px;
+}
+
+.forecast-container {
+  background-color: #62CEDD;
+  opacity: 0.7;
+  border: 1px solid rgba(0, 0, 0, 0.176);
+  border-radius: 5px;
+  margin-top: 20px;
 }
