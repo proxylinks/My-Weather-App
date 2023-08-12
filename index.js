@@ -69,13 +69,11 @@ function getForecast(coordinates) {
   console.log(coordinates);
   let apiKey = `cabdbda40038ba7d1165b953b1c7bd6c`;
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
 }
 
 // This function shows the weather of different cities across the world
 function checkWeather(response) {
-  console.log(response);
   celsiusTemperature = response.data.main.temp;
 
   let cityElement = document.querySelector("#city");
@@ -145,7 +143,6 @@ function showPosition(position) {
   let latitude = position.coords.latitude;
   let apiKey = `cabdbda40038ba7d1165b953b1c7bd6c`;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
-  console.log(apiUrl);
 
   axios.get(apiUrl).then(showCurrentWeather);
 }
